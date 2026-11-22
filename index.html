@@ -1,186 +1,202 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orbita – Wrist Browser | La web completa en tu Apple Watch</title>
-  <meta name="description" content="Orbita – Wrist Browser es un navegador para Apple Watch con bloqueo de anuncios, pestañas, videos con control desde la Digital Crown y cero rastreo.">
-  <meta name="theme-color" content="#010102">
-  <meta property="og:title" content="Orbita – Wrist Browser">
-  <meta property="og:description" content="La web completa en tu muñeca. Sin anuncios, sin rastreo.">
-  <meta property="og:image" content="assets/img/icon_512.png">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Orbita – Wrist Browser · The whole web on your Apple Watch</title>
+  <meta name="description" content="A web browser for Apple Watch with built-in ad, tracker and cookie-notice blocking, tabs, history and videos you control with the Digital Crown. No accounts, no tracking.">
+  <meta name="theme-color" content="#efeaff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://llcaballeroll.github.io/orbita_browser_web/">
+  <link rel="alternate" hreflang="en" href="https://llcaballeroll.github.io/orbita_browser_web/">
+  <link rel="alternate" hreflang="es" href="https://llcaballeroll.github.io/orbita_browser_web/es/">
+  <link rel="alternate" hreflang="x-default" href="https://llcaballeroll.github.io/orbita_browser_web/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orbita – Wrist Browser">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Orbita – Wrist Browser · The whole web on your Apple Watch">
+  <meta property="og:description" content="A web browser for Apple Watch with built-in ad, tracker and cookie-notice blocking, tabs, history and videos you control with the Digital Crown. No accounts, no tracking.">
+  <meta property="og:url" content="https://llcaballeroll.github.io/orbita_browser_web/">
+  <meta property="og:image" content="https://llcaballeroll.github.io/orbita_browser_web/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6825872586">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" as="image" href="assets/shots/en/watch-01-home.webp" fetchpriority="high">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Orbita – Wrist Browser",
+    "operatingSystem": "watchOS 10.0 or later, iOS 17.0 or later",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "downloadUrl": "https://apps.apple.com/us/app/orbita-wrist-browser/id6825872586",
+    "author": { "@type": "Person", "name": "Luis Angel Caballero Jardón" },
+    "image": "https://llcaballeroll.github.io/orbita_browser_web/assets/img/icon-512.png"
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="navbar">
-    <nav class="container nav-inner" aria-label="Principal">
-      <a href="#" class="logo">
-        <img src="assets/img/icon_512.png" alt="" width="28" height="28">
-        <span>Orbita<span class="logo-suffix"> – Wrist Browser</span></span>
-      </a>
+  <header class="nav">
+    <nav class="wrap nav-inner" aria-label="Main">
+      <a class="brand" href="./"><img src="assets/img/icon-192.png" alt="" width="28" height="28">Orbita</a>
       <div class="nav-links">
-        <a href="#funciones" class="hide-sm">Funciones</a>
-        <a href="#privacidad" class="hide-sm">Privacidad</a>
-        <a href="support.html">Soporte</a>
-        <a href="#descargar" class="btn btn-primary">Descargar</a>
+        <a href="#blocking">Blocking</a>
+        <a href="#video">Video</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#iphone">iPhone</a>
+        <a href="support.html">Support</a>
       </div>
+      <a class="lang" href="es/" hreflang="es" lang="es"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span>Español</span></a>
+      <a class="btn" href="https://apps.apple.com/us/app/orbita-wrist-browser/id6825872586" target="_blank" rel="noopener">Download</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <img src="assets/img/icon_512.png" alt="Ícono de Orbita – Wrist Browser" class="hero-icon rise" width="112" height="112">
-        <p class="eyebrow rise rise-2"><span class="dot"></span>Navegador para Apple Watch</p>
-        <h1 class="display-xl rise rise-2">La web completa,<br>en tu muñeca.</h1>
-        <p class="lead rise rise-3">Busca, lee y mira videos directo desde tu Apple Watch. Sin anuncios, sin rastreadores y sin necesitar el iPhone.</p>
-        <div class="hero-actions rise rise-4" id="descargar">
-          <a class="btn btn-primary" href="https://apps.apple.com/us/app/orbita-wrist-browser/id6825872586" target="_blank" rel="noopener">Descargar en la App Store</a>
-          <a href="#funciones" class="btn btn-secondary">Ver funciones</a>
+    <section class="tile hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <img class="app-icon enter" src="assets/img/icon-192.png" alt="" width="92" height="92">
+        <p class="eyebrow enter">Web browser for Apple Watch</p>
+        <h1 id="hero-title" class="display enter">The whole web.<br><span class="grad">On your wrist.</span></h1>
+        <p class="lead enter">Search, read and watch videos right from your Apple Watch. No ads, no trackers, no reaching for your iPhone.</p>
+        <div class="enter">
+          <div class="stores"><a class="store" href="https://apps.apple.com/us/app/orbita-wrist-browser/id6825872586" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 1.43c0 1.14-.5 2.27-1.18 3.08-.74.9-1.99 1.57-2.99 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.57-2.270 1.2-2.98.81-.94 2.15-1.64 3.250-1.68.03.13.06.28.06.43Zm4.56 15.71c-.03.07-.46 1.58-1.52 3.12-.94 1.34-1.94 2.71-3.43 2.71-1.52 0-1.9-.88-3.63-.88-1.7 0-2.3.91-3.67.91-1.38 0-2.33-1.26-3.43-2.8C4 18.38 2.97 15.57 2.97 12.920c0-4.28 2.8-6.55 5.55-6.55 1.45 0 2.67.95 3.6.95.86 0 2.22-1.01 3.9-1.01.61 0 2.89.06 4.37 2.19-.13.09-2.38 1.37-2.38 4.19 0 3.26 2.85 4.42 2.95 4.45Z"/></svg><span><small>Download on the</small><strong>App Store</strong></span></a></div>
+          <p class="fineprint">Free · Apple Watch with watchOS 10 or later · Optional tips, no ads of our own</p>
         </div>
+      </div>
+      <div class="hero-stage">
+        <img class="orbit" src="assets/img/orbit-640.webp" alt="" width="640" height="640">
+        <div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen cycle"><img src="assets/shots/en/watch-01-home.webp" alt="Orbita home screen with the search field and open tabs" width="422" height="514" fetchpriority="high"><img src="assets/shots/en/watch-02-page.webp" alt="A web page open in Orbita" width="422" height="514"><img src="assets/shots/en/watch-05-video.webp" alt="Orbita's video player with Digital Crown volume" width="422" height="514"></div></div></div></div>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="gallery" aria-label="Capturas de pantalla">
-      <div class="container">
-        <div class="gallery-panel">
-          <div class="watch-row">
-            <figure class="watch">
-              <div class="watch-frame"><img src="assets/img/01_home.png" alt="Pantalla de inicio con buscador y pestañas abiertas" width="422" height="514" loading="lazy"></div>
-              <figcaption>Busca o dicta una dirección</figcaption>
-            </figure>
-            <figure class="watch">
-              <div class="watch-frame"><img src="assets/img/02_page.png" alt="Artículo de Wikipedia abierto en Orbita" width="422" height="514" loading="lazy"></div>
-              <figcaption>Páginas reales, no versiones recortadas</figcaption>
-            </figure>
-            <figure class="watch">
-              <div class="watch-frame"><img src="assets/img/04_tabs.png" alt="Lista de pestañas abiertas" width="422" height="514" loading="lazy"></div>
-              <figcaption>Pestañas que no se pierden</figcaption>
-            </figure>
-          </div>
-        </div>
+    <!-- Bloqueo -->
+    <section id="blocking" class="tile dark" aria-labelledby="blocking-title">
+      <div class="wrap">
+        <p class="eyebrow">Built-in blocking</p>
+        <h2 id="blocking-title" class="headline reveal">Ads, trackers and cookie notices.<br>Gone before they load.</h2>
+        <p class="lead reveal">Blocking happens inside the web engine, before anything downloads. Pages load faster and your battery lasts longer.</p>
+        <div class="facts reveal"><div><b>190+</b><span>ad and tracker domains blocked</span></div><div><b>1 tap</b><span>to allow ads on a site</span></div><div><b>0</b><span>servers consulted: the list ships in the app</span></div></div>
+      </div>
+      <div class="stage">
+        <figure class="side"><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-03-menu.webp" alt="Page menu with back, reload, tabs and site options" width="422" height="514" loading="lazy"></div></div></div></div></figure>
+        <figure><div class="aw big"><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-02-page.webp" alt="A web page open in Orbita" width="422" height="514" loading="lazy"></div></div></div></div></figure>
+        <figure class="side"><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-01-home.webp" alt="Orbita home screen with the search field and open tabs" width="422" height="514" loading="lazy"></div></div></div></div></figure>
       </div>
     </section>
 
-    <!-- Features -->
-    <section class="section" id="funciones">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Funciones</p>
-          <h2 class="display-md">Pensado para una pantalla de 45&nbsp;mm.</h2>
-          <p class="muted">Todo lo esencial de un navegador, adaptado al reloj y a la Digital Crown.</p>
-        </div>
-
-        <div class="features-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="card-title">Bloqueo de anuncios nativo</h3>
-            <p>Anuncios, rastreadores y avisos de cookies se bloquean dentro del motor web, antes de descargarse. Las páginas cargan más rápido y la batería dura más.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-            </div>
-            <h3 class="card-title">Videos con la Digital Crown</h3>
-            <p>Orbita detecta los videos de cada página y los abre en el reproductor del reloj. Gira la corona para subir el volumen o adelantar.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
-            </div>
-            <h3 class="card-title">Bocina o AirPods</h3>
-            <p>Escucha por la bocina del reloj o pasa el audio a tus audífonos Bluetooth con un toque, y regrésalo cuando quieras.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>
-            </div>
-            <h3 class="card-title">Pestañas</h3>
-            <p>Abre varias páginas y cambia entre ellas. Se conservan aunque cierres la app, y Orbita duerme las que no usas para cuidar la memoria.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>
-            </div>
-            <h3 class="card-title">Búsqueda por voz</h3>
-            <p>Dicta lo que buscas o una dirección como "wikipedia punto org". Elige entre DuckDuckGo, Google, Bing o Ecosia.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <h3 class="card-title">Marcadores e historial</h3>
-            <p>Guarda tus sitios favoritos y vuelve a lo que leíste. Borra el historial cuando quieras o navega en modo privado.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Privacy -->
-    <section class="section" id="privacidad">
-      <div class="container split">
+    <!-- Videos -->
+    <section id="video" class="tile alt" aria-labelledby="video-title">
+      <div class="wrap split">
         <div>
-          <p class="eyebrow">Privacidad</p>
-          <h2 class="display-md">Tu navegación es solo tuya.</h2>
-          <p class="muted">Orbita no tiene cuentas, analíticas ni anuncios propios. Lo que haces en el reloj se queda en el reloj.</p>
-          <ul class="checklist">
-            <li>No recopilamos ningún dato personal ni de uso.</li>
-            <li>Marcadores, historial y pestañas se guardan solo en tu Apple Watch.</li>
-            <li>Navegación privada que no guarda historial, cookies ni pestañas.</li>
-            <li>Borra cookies y datos de sitios con un toque.</li>
-          </ul>
-          <p class="cta-row"><a href="privacy.html" class="btn btn-secondary">Leer la política de privacidad</a></p>
+          <p class="eyebrow">Videos</p>
+          <h2 id="video-title" class="headline reveal">Turn the Crown.<br>Hear it on AirPods.</h2>
+          <p class="lead reveal">Orbita finds the videos on each page and opens them in the watch's native player.</p>
+          <ul class="checks reveal"><li><strong>Volume or seek with the Digital Crown</strong><span>Pick what the Crown does: change the volume or move through the video.</span></li><li><strong>10-second skips</strong><span>Jump back or forward with one tap.</span></li><li><strong>AirPods and Bluetooth headphones</strong><span>Send the sound to your headphones, and bring it back to the watch whenever you like.</span></li></ul>
         </div>
-        <figure class="watch">
-          <div class="watch-frame"><img src="assets/img/06_settings.png" alt="Ajustes de Orbita con buscador y bloqueo de contenido" width="422" height="514" loading="lazy"></div>
-          <figcaption>Ajustes simples, en español</figcaption>
-        </figure>
+        <div class="stage"><div class="aw big"><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-05-video.webp" alt="Orbita's video player with Digital Crown volume" width="422" height="514" loading="lazy"></div></div></div></div></div>
       </div>
     </section>
 
-    <!-- Support -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-banner">
-          <div>
-            <span class="badge">Gratis</span>
-            <h2 class="cta-title">Gratis y sin anuncios.</h2>
-            <p>Orbita es un proyecto independiente. Si te es útil, puedes dejar una propina desde la app en "Apoya a Orbita". Las propinas son opcionales y no desbloquean funciones.</p>
-          </div>
-          <a href="support.html" class="btn btn-secondary">Ayuda y soporte</a>
+    <!-- Navegación diaria -->
+    <section id="browse" class="tile" aria-labelledby="browse-title">
+      <div class="wrap">
+        <p class="eyebrow">Everyday browsing</p>
+        <h2 id="browse-title" class="headline reveal">Everything a browser needs.<br>Sized for your wrist.</h2>
+        <div class="cards reveal"><article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg></span><h3>Tabs</h3><p>Keep several pages open and switch between them. They stay open after you close the app, and unused tabs go to sleep to save memory.</p></article><article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>History and bookmarks</h3><p>Find what you read again and save the sites you use most. Clear your history whenever you want.</p></article><article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></span><h3>Search by voice</h3><p>Dictate, scribble or type. Say an address like “wikipedia dot org”. Choose DuckDuckGo, Google, Bing or Ecosia.</p></article><article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><h3>Mobile or desktop</h3><p>Ask sites for their mobile, desktop or watch version, from Settings or the page menu.</p></article><article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M8 11h6M11 8v6"/></svg></span><h3>Page zoom</h3><p>Make text bigger or smaller from the page menu.</p></article><article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M6 3l12 18"/></svg></span><h3>Pop-up blocking</h3><p>Pop-ups are stopped, and the page menu tells you how many.</p></article></div>
+      </div>
+      <div class="stage">
+        <figure class="side"><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-07-history.webp" alt="History" width="422" height="514" loading="lazy"></div></div></div></div></figure>
+        <figure><div class="aw big"><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-04-tabs.webp" alt="List of open tabs" width="422" height="514" loading="lazy"></div></div></div></div></figure>
+      </div>
+    </section>
+
+    <!-- Privacidad -->
+    <section id="privacy" class="tile alt" aria-labelledby="privacy-title">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Privacy</p>
+          <h2 id="privacy-title" class="headline reveal">Your browsing<br>stays on your watch.</h2>
+          <p class="lead reveal">Orbita has no accounts, no analytics and no ads of its own.</p>
+          <ul class="checks reveal"><li><strong>No data collected</strong><span>Nothing about you or your browsing is sent to the developer or to third parties.</span></li><li><strong>Stored only on your watch</strong><span>Bookmarks, history and tabs never leave it.</span></li><li><strong>Private Browsing</strong><span>Saves no history, cookies or tabs.</span></li><li><strong>One-tap cleanup</strong><span>Clear cookies and website data from Settings.</span></li></ul>
+          <p style="margin-top:24px"><a href="privacy.html">Read the privacy policy ›</a></p>
         </div>
+        <div class="stage"><div class="aw big"><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-06-settings.webp" alt="Orbita settings: search engine, site version and content blocking" width="422" height="514" loading="lazy"></div></div></div></div></div>
+      </div>
+    </section>
+
+    <!-- iPhone -->
+    <section id="iphone" class="tile dark black" aria-labelledby="iphone-title">
+      <div class="wrap">
+        <p class="eyebrow">iPhone app included</p>
+        <h2 id="iphone-title" class="headline reveal">A pocket guide.<br>And a tip jar.</h2>
+        <p class="lead reveal">Orbita lives on your Apple Watch. The iPhone app shows how it works in 8 steps and is where you can leave an optional tip.</p>
+        <ol class="steps reveal" style="max-width:900px;margin-inline:auto"><li><strong>Search or open a page</strong>Dictate, scribble or type.</li><li><strong>Scroll with the Crown</strong>Tap links like on your iPhone.</li><li><strong>Page menu</strong>Back, reload, bookmarks, zoom, site version.</li><li><strong>Tabs</strong>Switch from Open Tabs.</li><li><strong>Videos</strong>Crown for volume or seek.</li><li><strong>Ad and tracker blocking</strong>On by default.</li><li><strong>Private Browsing</strong>Pages aren't saved to History.</li><li><strong>Bookmarks and History</strong>Right from the Home screen.</li></ol>
+      </div>
+      <div class="stage">
+        <div class="ip side"><div class="ip-case"><i class="b1"></i><i class="b2"></i><i class="b3"></i><div class="ip-glass"><div class="ip-screen"><img src="assets/shots/en/iphone-02-center.webp" alt="Guide steps on iPhone" width="760" height="1652" loading="lazy"></div></div></div></div>
+        <div class="ip "><div class="ip-case"><i class="b1"></i><i class="b2"></i><i class="b3"></i><div class="ip-glass"><div class="ip-screen"><img src="assets/shots/en/iphone-01-top.webp" alt="Top of the iPhone app with the guide" width="760" height="1652" loading="lazy"></div></div></div></div>
+        <div class="ip side"><div class="ip-case"><i class="b1"></i><i class="b2"></i><i class="b3"></i><div class="ip-glass"><div class="ip-screen"><img src="assets/shots/en/iphone-03-bottom.webp" alt="Tips on iPhone" width="760" height="1652" loading="lazy"></div></div></div></div>
+      </div>
+      <p class="fineprint" style="margin-top:-56px;padding-bottom:72px">Tips are one-time payments and don’t unlock extra features.</p>
+    </section>
+
+    <!-- Galería -->
+    <section class="tile alt" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <h2 id="gallery-title" class="headline">Take a closer look.</h2>
+      </div>
+      <div class="gallery">
+        <div class="gallery-track" tabindex="0" role="group" aria-label="Screenshots, scroll sideways">
+          <figure><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-01-home.webp" alt="" width="422" height="514" loading="lazy"></div></div></div></div><figcaption>Home</figcaption></figure>
+          <figure><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-02-page.webp" alt="" width="422" height="514" loading="lazy"></div></div></div></div><figcaption>Real web pages</figcaption></figure>
+          <figure><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-03-menu.webp" alt="" width="422" height="514" loading="lazy"></div></div></div></div><figcaption>Page menu</figcaption></figure>
+          <figure><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-04-tabs.webp" alt="" width="422" height="514" loading="lazy"></div></div></div></div><figcaption>Tabs</figcaption></figure>
+          <figure><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-05-video.webp" alt="" width="422" height="514" loading="lazy"></div></div></div></div><figcaption>Video player</figcaption></figure>
+          <figure><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-06-settings.webp" alt="" width="422" height="514" loading="lazy"></div></div></div></div><figcaption>Settings</figcaption></figure>
+          <figure><div class="aw "><div class="aw-case"><i class="guard"></i><i class="crown"></i><i class="side"></i><i class="action"></i><div class="aw-glass"><div class="aw-screen"><img src="assets/shots/en/watch-07-history.webp" alt="" width="422" height="514" loading="lazy"></div></div></div></div><figcaption>History</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descargar -->
+    <section id="get" class="tile pad" aria-labelledby="get-title">
+      <div class="wrap">
+        <img class="reveal" src="assets/img/icon-192.png" alt="" width="96" height="96" style="width:96px;border-radius:50%;margin:0 auto 20px">
+        <p class="eyebrow">Free on the App Store</p>
+        <h2 id="get-title" class="headline reveal">Put the web<br>on your wrist.</h2>
+        <div class="stores"><a class="store" href="https://apps.apple.com/us/app/orbita-wrist-browser/id6825872586" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 1.43c0 1.14-.5 2.27-1.18 3.08-.74.9-1.99 1.57-2.99 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.57-2.270 1.2-2.98.81-.94 2.15-1.64 3.250-1.68.03.13.06.28.06.43Zm4.56 15.71c-.03.07-.46 1.58-1.52 3.12-.94 1.34-1.94 2.71-3.43 2.71-1.52 0-1.9-.88-3.63-.88-1.7 0-2.3.91-3.67.91-1.38 0-2.33-1.26-3.43-2.8C4 18.38 2.97 15.57 2.97 12.920c0-4.28 2.8-6.55 5.55-6.55 1.45 0 2.67.95 3.6.95.86 0 2.22-1.01 3.9-1.01.61 0 2.89.06 4.37 2.19-.13.09-2.38 1.37-2.38 4.19 0 3.26 2.85 4.42 2.95 4.45Z"/></svg><span><small>Download on the</small><strong>App Store</strong></span></a></div>
+        <div class="facts small reveal"><div><b>watchOS 10+</b><span>on Apple Watch</span></div><div><b>iOS 17+</b><span>for the iPhone guide</span></div><div><b>34</b><span>languages: English and 33 more</span></div><div><b>0</b><span>accounts or sign-ups</span></div></div>
+        <p class="fineprint" style="margin-top:36px">Pages load fastest on Wi-Fi or cellular. Through your iPhone’s Bluetooth they’re slower. Some sites and video services don’t work on Apple Watch.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="logo"><img src="assets/img/icon_512.png" alt="" width="28" height="28">Orbita – Wrist Browser</div>
-        <small>&copy; 2026 Orbita – Wrist Browser. Creado por Luis Angel Caballero Jardón.</small>
-        <small>Metepec, Estado de México.</small>
-      </div>
+    <div class="wrap">
       <div class="footer-links">
-        <a href="privacy.html">Privacidad</a>
-        <a href="support.html">Soporte</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="presskit.html">Press kit</a>
+        <a href="technical.html">How it's made</a>
+        <a href="es/" hreflang="es" lang="es">Español</a>
       </div>
+      <p>An independent app made in Metepec, State of Mexico, by Luis Angel Caballero Jardón. <a href="mailto:soporte.orbitabrowser@outlook.com">soporte.orbitabrowser@outlook.com</a></p>
+      <p>Apple, Apple Watch, iPhone, AirPods, Digital Crown and App Store are trademarks of Apple Inc. Orbita is not affiliated with Apple.</p>
+      <p>© 2026 Luis Angel Caballero Jardón · Orbita – Wrist Browser</p>
     </div>
   </footer>
-
 </body>
 </html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://llcaballeroll.github.io/orbita_browser_web/sitemap.xml

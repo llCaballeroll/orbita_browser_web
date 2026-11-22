@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>How it’s made · Orbita – Wrist Browser</title>
+  <meta name="description" content="How Orbita – Wrist Browser is built: SwiftUI, WebKit content blocking, AVPlayer with the Digital Crown and StoreKit 2 tips.">
+  <meta name="theme-color" content="#efeaff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://llcaballeroll.github.io/orbita_browser_web/technical.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orbita – Wrist Browser">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="How it’s made · Orbita – Wrist Browser">
+  <meta property="og:description" content="How Orbita – Wrist Browser is built: SwiftUI, WebKit content blocking, AVPlayer with the Digital Crown and StoreKit 2 tips.">
+  <meta property="og:url" content="https://llcaballeroll.github.io/orbita_browser_web/technical.html">
+  <meta property="og:image" content="https://llcaballeroll.github.io/orbita_browser_web/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6825872586">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <nav class="wrap nav-inner" aria-label="Main">
+      <a class="brand" href="./"><img src="assets/img/icon-192.png" alt="" width="28" height="28">Orbita</a>
+      <div class="nav-links">
+        <a href="./">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+      <a class="lang" href="es/" hreflang="es" lang="es"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span>Español</span></a>
+      <a class="btn" href="https://apps.apple.com/us/app/orbita-wrist-browser/id6825872586" target="_blank" rel="noopener">Download</a>
+    </nav>
+  </header>
+
+  <main id="main" class="doc">
+    <div class="wrap">
+      <p class="eyebrow">Under the hood</p>
+      <h1>How it’s made</h1>
+      <p class="lead">A native Apple Watch app written in Swift and SwiftUI, with a small iPhone companion.</p>
+      <ul class="chips" style="justify-content:flex-start"><li>Swift</li><li>SwiftUI</li><li>WebKit</li><li>AVKit</li><li>StoreKit 2</li><li>watchOS 10+</li><li>iOS 17+</li></ul>
+
+      <h2>At a glance</h2>
+      <dl class="spec">
+        <dt>Apple Watch</dt><dd>watchOS 10.0 or later; runs on its own, without the iPhone nearby</dd>
+        <dt>iPhone</dt><dd>iOS 17.0 or later: guide and tips</dd>
+        <dt>Web engine</dt><dd>The system’s WebKit, the same engine as Safari</dd>
+        <dt>Languages</dt><dd>34, from a single shared String Catalog</dd>
+        <dt>Account</dt><dd>Not needed. Bookmarks, history (up to 300 pages), tabs and settings are stored on the watch</dd>
+        <dt>Purchases</dt><dd>Three consumable tips with StoreKit 2, on iPhone only</dd>
+        <dt>Own server</dt><dd>None. There’s no developer backend, analytics or crash reporting</dd>
+      </dl>
+
+      <h2>The foundation</h2>
+      <div class="cards" style="margin-top:16px">
+        <article class="card"><h3>Content blocking</h3><p>A <strong>WKContentRuleList</strong>, the same mechanism Safari content blockers use, drops requests to more than 190 ad and tracker domains inside WebKit’s network process. A second list hides cookie banners from the most common consent platforms, and leftover ad slots are hidden with CSS.</p></article>
+        <article class="card"><h3>Video</h3><p>A small script reports every playable video on the page. Orbita opens it in <strong>AVPlayer</strong>, where the Digital Crown has a single owner: you choose whether it controls volume or seeking. The audio session follows route changes to AirPods.</p></article>
+        <article class="card"><h3>Tabs that sleep</h3><p>Each tab keeps its address and title. Only recent tabs keep a live page; older ones go to sleep and reload when you come back, so memory stays low on the watch.</p></article>
+        <article class="card"><h3>Site versions</h3><p>Orbita asks sites for their iPhone, Mac or watch layout by changing the user agent. The iPhone version is the default because it fits the small screen best.</p></article>
+      </div>
+
+      <h2>Project structure</h2>
+      <p>The project is generated with <strong>XcodeGen</strong>. The watch app and the iPhone app share the theme and the translations.</p>
+<pre class="tree">Orbita/              // Apple Watch app
+├── App/             // entry point, settings, theme
+├── Browser/         // web view, tabs, menu, blocker, video player
+├── Features/        // home, tabs, bookmarks, history, settings, about
+├── Store/           // bookmarks and history saved as JSON
+└── Resources/       // blocklists, String Catalog, icon
+OrbitaPhone/         // iPhone app: guide and tip jar
+OrbitaTests/         // unit tests
+OrbitaUITests/       // interface tests on the watch simulator</pre>
+
+      <h2>Privacy by design</h2>
+      <ul>
+        <li><strong>No sign-up:</strong> no name, email or phone number.</li>
+        <li><strong>Local data:</strong> bookmarks and history are small JSON files on the watch; deleting the app removes them.</li>
+        <li><strong>Blocklist inside the app:</strong> applied without contacting any server.</li>
+        <li><strong>No third-party SDKs:</strong> no analytics, ads or crash reporting.</li>
+        <li><strong>Apple</strong> processes tips; the developer never sees payment details.</li>
+      </ul>
+      <p>The app’s code is private, but I’m happy to talk about how it’s made: <a href="mailto:soporte.orbitabrowser@outlook.com?subject=Orbita%20-%20Tech">soporte.orbitabrowser@outlook.com</a> · <a href="https://github.com/llCaballeroll" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="presskit.html">Press kit</a>
+        <a href="technical.html">How it's made</a>
+        <a href="es/" hreflang="es" lang="es">Español</a>
+      </div>
+      <p>An independent app made in Metepec, State of Mexico, by Luis Angel Caballero Jardón. <a href="mailto:soporte.orbitabrowser@outlook.com">soporte.orbitabrowser@outlook.com</a></p>
+      <p>Apple, Apple Watch, iPhone, AirPods, Digital Crown and App Store are trademarks of Apple Inc. Orbita is not affiliated with Apple.</p>
+      <p>© 2026 Luis Angel Caballero Jardón · Orbita – Wrist Browser</p>
+    </div>
+  </footer>
+</body>
+</html>
